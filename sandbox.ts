@@ -1,7 +1,12 @@
-const text = "Go Away JS.";
-console.log(text);
+let character = "Thuta";
+let age = 20;
+let isSingle = true;
 
-const inputs = document.querySelectorAll('input');
-inputs.forEach((input) => {
-    console.log(input);
-})
+character = "Kyaw Kyaw";
+age = 20;
+isSingle = false;
+
+const circ = (diameter: number) => {
+    return diameter * Math.PI;
+}
+console.log(circ(7.5));
