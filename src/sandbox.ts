@@ -1,23 +1,15 @@
-type stringOrNumber =  string|number;
-type objectWithName = {
-    name: string,
-    uId: stringOrNumber;
-}
+// const netNinjaATag = document.querySelector('a')!;
+// console.log(netNinjaATag.href);
 
-let sellItem : (a: stringOrNumber, b: string) => void;
-sellItem = (uId: stringOrNumber, title: string): void => {
-    console.log(`Item ${uId}, ${title} has been sold out.`);
-}
-sellItem(1, 'shirt');
+const form = document.querySelector('.new-item-form') as HTMLFormElement;
+// console.log(form.children);
+const type = document.querySelector('#type') as HTMLSelectElement;
+const toFrom = document.querySelector('#tofrom') as HTMLInputElement;
+const details = document.querySelector('#details') as HTMLInputElement;
+const amount = document.querySelector('#amount') as HTMLInputElement;
 
-let horrorMovie: (a: stringOrNumber, b: string) => void;
-horrorMovie = (uId: stringOrNumber, title: string): void => {
-    console.log(`Category ${uId}, ${title}`);
-}
-horrorMovie('horror', 'THE NUN')
+form.addEventListener('submit', (e: Event) => {
+    e.preventDefault();
 
-let greeting : (object: objectWithName) => void; 
-greeting = (user: objectWithName) => {
-    console.log(`Hello ${user.uId}, said ${user.name}`)
-}
-greeting({uId: 'Typescript', name:'Thuta'})
+    console.log(type.value, toFrom.value, details.value, amount.valueAsNumber);
+})
