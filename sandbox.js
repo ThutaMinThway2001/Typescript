@@ -1,27 +1,19 @@
-//Explicit types
-var character;
+//any types
 var age;
-var isSingle;
-character = "Spiderman";
 age = 21;
-isSingle = true;
-//Array
-var fruits = [];
-fruits.push("apple");
-console.log(fruits);
-//Union types
-var mixing = [];
-mixing.push("apple", 1, true);
-console.log(mixing);
-var newCharacter;
-//Object
-var userOne;
-userOne = { name: 'Thuta', age: 20, isSingle: true };
-console.log(userOne);
-var userTwo;
-userTwo = {
-    name: 'Aung Aung',
-    age: 21,
-    isSingle: false
+console.log(age);
+age = 'twenty one';
+console.log(age);
+age = true;
+console.log(age);
+age = { name: 'thuta' };
+console.log(age);
+var mixed = [];
+mixed.push('orange', 1);
+console.log(mixed);
+var user;
+user = {
+    name: "Thuta",
+    age: 21
 };
-console.log(userTwo);
+console.log(user);

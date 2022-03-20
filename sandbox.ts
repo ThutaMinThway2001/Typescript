@@ -1,37 +1,21 @@
-//Explicit types
-let character : string;
-let age : number;
-let isSingle : boolean;
-
-character = "Spiderman";
+//any types
+let age: any;
 age = 21;
-isSingle = true;
+console.log(age);
+age = 'twenty one';
+console.log(age);
+age = true;
+console.log(age);
+age = {name: 'thuta'};
+console.log(age);
 
-//Array
-let fruits : string[] = [];
-fruits.push("apple");
-console.log(fruits);
+let mixed : any[] = [];
+mixed.push('orange', 1);
+console.log(mixed);
 
-//Union types
-let mixing : (string | number | boolean)[] = [];
-mixing.push("apple", 1, true);
-console.log(mixing);
-
-let newCharacter : string | number;
-
-//Object
-let userOne : object;
-userOne = {name: 'Thuta', age: 20, isSingle: true};
-console.log(userOne);
-
-let userTwo : {
-    name: string,
-    age: number,
-    isSingle: boolean
+let user : {name: string, age: number};
+user = {
+    name: "Thuta",
+    age: 21
 }
-userTwo = {
-    name: 'Aung Aung',
-    age: 21,
-    isSingle: false
-}
-console.log(userTwo);
+console.log(user);
