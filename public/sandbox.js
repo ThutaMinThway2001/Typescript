@@ -1,16 +1,13 @@
 "use strict";
-let sayName;
-sayName = () => {
-    console.log('Hello Typescript.');
+const sellItem = (uId, title) => {
+    console.log(`Item ${uId}, ${title} has been sold out.`);
 };
-sayName();
-const add = (a, b, c = 3) => {
-    console.log(a + b);
-    console.log(c);
+sellItem(1, 'shirt');
+const horrorMovie = (uId, title) => {
+    console.log(`Category ${uId}, ${title}`);
 };
-add(1, 2, "hello");
-const subtract = (a, b) => {
-    return a - b;
+horrorMovie('horror', 'THE NUN');
+const greeting = (user) => {
+    console.log(`Hello ${user.uId}, said ${user.name}`);
 };
-let minus = subtract(10, 5); //5
-console.log(minus);
+greeting({ uId: 'Typescript', name: 'Thuta' });

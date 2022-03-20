@@ -1,18 +1,20 @@
-let sayName: Function;
-
-sayName = () => {
-    console.log('Hello Typescript.');
+type stringOrNumber =  string|number;
+type objectWithName = {
+    name: string,
+    uId: stringOrNumber;
 }
-sayName();
 
-const add = (a:number, b:number, c: number | string = 3):void => {
-    console.log(a + b);
-    console.log(c);
+const sellItem = (uId: stringOrNumber, title: string): void => {
+    console.log(`Item ${uId}, ${title} has been sold out.`);
 }
-add(1, 2, "hello");
+sellItem(1, 'shirt');
 
-const subtract = (a:number, b:number):number => {
-   return a - b;
+const horrorMovie = (uId: stringOrNumber, title: string): void => {
+    console.log(`Category ${uId}, ${title}`);
 }
-let minus = subtract(10, 5); //5
-console.log(minus);
+horrorMovie('horror', 'THE NUN')
+
+const greeting = (user: objectWithName) => {
+    console.log(`Hello ${user.uId}, said ${user.name}`)
+}
+greeting({uId: 'Typescript', name:'Thuta'})
