@@ -1,31 +1,37 @@
-// array 
-let fruits = ['apple', 'orange', 'banana'];
-fruits.push('pineapple');
-// fruits.push(1);
+//Explicit types
+let character : string;
+let age : number;
+let isSingle : boolean;
+
+character = "Spiderman";
+age = 21;
+isSingle = true;
+
+//Array
+let fruits : string[] = [];
+fruits.push("apple");
 console.log(fruits);
 
-let numbers = [1,2,3,4,5];
-numbers.push(6);
-// numbers.push('apple');
-console.log(numbers);
+//Union types
+let mixing : (string | number | boolean)[] = [];
+mixing.push("apple", 1, true);
+console.log(mixing);
 
-// object 
-let user = {
-    name: 'Thuta',
-    age: 21,
-    isSingle: true,
-    skills: []
-};
-user.name = "Aung Aung";
-user.age = 40;
-user.isSingle = false;
-// user.skills = ['html', 'css', 'js'];
+let newCharacter : string | number;
 
-user = {
-    name: 'Pann Ei',
-    age: 21,
-    isSingle: true,
-    skills: ['html', 'css', 'js']
+//Object
+let userOne : object;
+userOne = {name: 'Thuta', age: 20, isSingle: true};
+console.log(userOne);
+
+let userTwo : {
+    name: string,
+    age: number,
+    isSingle: boolean
 }
-
-console.log(user);
+userTwo = {
+    name: 'Aung Aung',
+    age: 21,
+    isSingle: false
+}
+console.log(userTwo);

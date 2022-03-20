@@ -1,27 +1,27 @@
-// array 
-var fruits = ['apple', 'orange', 'banana'];
-fruits.push('pineapple');
-// fruits.push(1);
+//Explicit types
+var character;
+var age;
+var isSingle;
+character = "Spiderman";
+age = 21;
+isSingle = true;
+//Array
+var fruits = [];
+fruits.push("apple");
 console.log(fruits);
-var numbers = [1, 2, 3, 4, 5];
-numbers.push(6);
-// numbers.push('apple');
-console.log(numbers);
-// object 
-var user = {
-    name: 'Thuta',
+//Union types
+var mixing = [];
+mixing.push("apple", 1, true);
+console.log(mixing);
+var newCharacter;
+//Object
+var userOne;
+userOne = { name: 'Thuta', age: 20, isSingle: true };
+console.log(userOne);
+var userTwo;
+userTwo = {
+    name: 'Aung Aung',
     age: 21,
-    isSingle: true,
-    skills: []
+    isSingle: false
 };
-user.name = "Aung Aung";
-user.age = 40;
-user.isSingle = false;
-// user.skills = ['html', 'css', 'js'];
-user = {
-    name: 'Pann Ei',
-    age: 21,
-    isSingle: true,
-    skills: ['html', 'css', 'js']
-};
-console.log(user);
+console.log(userTwo);
