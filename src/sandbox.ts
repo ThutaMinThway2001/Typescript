@@ -15,11 +15,14 @@ const list = new ListTemplate(ul);
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
     let doc: HasFormatter;
+    
+    let values: [string, string, number];
+    values = [toFrom.value, details.value, amount.valueAsNumber];
 
     if(type.value === 'invoice'){
-        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }else{
-        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Payment(...values);
     }
     
     list.render(doc, type.value, 'end');
