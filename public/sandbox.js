@@ -1,6 +1,19 @@
 "use strict";
-// const netNinjaATag = document.querySelector('a')!;
-// console.log(netNinjaATag.href);
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.detail = d;
+        this.amount = a;
+    }
+}
+const invoiceOne = new Invoice('Thuta', 'This is Thuta.', 200);
+const invoiceTwo = new Invoice('Kyaw Kyaw', 'This is Kyaw Kyaw.', 300);
+const invoices = [];
+invoices.push(invoiceOne);
+invoices.push(invoiceTwo);
+invoiceOne.client = "Admin"; //Thuta
+invoiceTwo.amount = 400; //300
+console.log(invoices);
 const form = document.querySelector('.new-item-form');
 // console.log(form.children);
 const type = document.querySelector('#type');
